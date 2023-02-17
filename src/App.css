@@ -16,6 +16,10 @@ img {
   width: 500px;
 }
 
+h2 {
+  margin-bottom: 0;
+}
+
 .center {
   display: flex;
   flex-direction: column;

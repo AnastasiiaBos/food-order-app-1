@@ -12,7 +12,8 @@ const Dishes = () => {
             {dishesData
             .filter(item => {
                 if (selectedCategory === 'ALL') return true;
-                // если выбран раздел ALL покажи все блюда - TRUE - пропускает каждое число
+                // если выбран раздел ALL покажи все блюда - TRUE - пропускает каждый рецепт. т.к. метод filter возвращает true или false
+                // если true - Элемент остается в новом массиве, если false - то не проходит фильтрацию и не добавляется в массив
                 return  selectedCategory === item.category;
                 // верни те блюда у которых название категории из dishesData совпадает с категорией из reducer
             })
