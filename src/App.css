@@ -33,6 +33,19 @@ button {
   cursor: pointer;
 }
 
-.filterElement {
+.categoryButtonSelected {
+  margin: 5px;
+  padding: 5px;
+  background-color: green;
+  cursor: pointer;
+}
+
+.categoryButton {
+  margin: 5px;
+  padding: 5px;
+}
+
+.categoryButton:hover {
+  background-color: #fdeb6b;
   cursor: pointer;
 }

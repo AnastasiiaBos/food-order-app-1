@@ -1,12 +1,22 @@
 // import { useState } from 'react';
-import dishesData from '../../data/dataDishes';  
+import { useSelector } from 'react-redux';
+import dishesData from '../../data/dishesData';  
+import { getSelectedCategory } from '../../redux/dishesSlice';
 import Dish from './Dish';
 
 const Dishes = () => {
-    
+    const selectedCategory = useSelector(getSelectedCategory);
+
     return (
         <div>
-            {dishesData.map(item => <Dish dish={item} key={item.id}/>)}
+            {dishesData
+            .filter(item => {
+                if (selectedCategory === 'ALL') return true;
+                // если выбран раздел ALL покажи все блюда - TRUE - пропускает каждое число
+                return  selectedCategory === item.category;
+                // верни те блюда у которых название категории из dishesData совпадает с категорией из reducer
+            })
+            .map(item => <Dish dish={item} key={item.id}/>)}
         </div>
     )
 };
