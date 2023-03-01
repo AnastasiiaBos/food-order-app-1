@@ -7,7 +7,7 @@ const AllCategories = () => {
 
             {/* почему не берем из dataDishes категории? потому что с ними будем сравнивать! */}
             {['SEAFOOD', 'ITALIAN', 'APPETIZERS', 'SALADS', 'ALL']
-            .map( category => <Filter category={category} />)}
+            .map( (category, index) => <Filter category={category} key={index} />)}
             
         </div>
     )

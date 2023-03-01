@@ -3,7 +3,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 export const dishesSlice = createSlice({
-    name: 'dishes',
+    name: 'dishes', //название reducera
     initialState: { //либо можно вынести отдельную переменную const initialState - ПЕРВОНАЧАЛЬНОЕ СОСТОЯНИЕ
         selectedCategory: 'SEAFOOD' //когда загружается страница первой отображается эта категория и ее содержимое
     },

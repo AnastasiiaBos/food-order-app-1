@@ -15,11 +15,13 @@ const Filter = ({category}) => {
     // const chooseStyle = () => {
     //     return selectedCategory === category ? 'categoryButtonSelected categoryButton' : 'categoryButton';
     // } 
-    // const chooseStyle = selectedCategory === category ? 'categoryButtonSelected categoryButton' : 'categoryButton'; // переменная, не ф-я, кот-я изменится в процессе
+    // const chooseStyle = selectedCategory === category ? 'categoryButtonSelected categoryButton' : 'categoryButton'; 
+    // переменная, не ф-я, кот-я изменится в процессе
 
     return (
         <p className={`${selectedCategory === category ? 'categoryButtonSelected categoryButton' : 'categoryButton'} center`} 
         onClick={() => dispatch(filterCategory(category))}>
+            {/* при клике на кнопку обновляется сост-е: фильтруется благодаря dispatch по входному параметру category */}
         {/* <div className={`${chooseStyle()} center`}> */}
             {/* выбранная категория подсвечивается зеленым, остальные при наведении - желтым + все они ЦЕНТРИРОВАНЫ*/}
             {category}

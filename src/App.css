@@ -37,19 +37,24 @@ button {
   cursor: pointer;
 }
 
-.categoryButtonSelected {
-  margin: 5px;
-  padding: 5px;
-  background-color: green;
-  cursor: pointer;
-}
-
 .categoryButton {
   margin: 5px;
   padding: 5px;
+  cursor: pointer;
+}
+
+.categoryButtonSelected {
+  background-color: green;
 }
 
 .categoryButton:hover {
   background-color: #fdeb6b;
-  cursor: pointer;
+}
+
+.cart {
+  margin: 5px 0;
+}
+
+.cartItem {
+  margin: 10px 0;
 }

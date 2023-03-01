@@ -1,10 +1,13 @@
 // import imgOne from '../../../public/img/feta.jpg';
 
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addItemToCart } from "../../redux/cartSlice";
 import { ChangeQuantity } from "../Cart/ChangeQuantity";
 
 const Dish = ({dish}) => {
     const [quantity, setQuantity] = useState(1);
+    const dispatch = useDispatch();
 
     return (<div className="center">
     {/* <img src={`../../../public/img/${dish.img}.jpg`} alt="dish" /> */}
@@ -12,7 +15,8 @@ const Dish = ({dish}) => {
         <h2>{dish.name}</h2>
         <p>$ {dish.price}</p>
         <ChangeQuantity quantity={quantity} setQuantity={setQuantity} />
-        <button>ADD TO CART</button>
+        <button onClick={() => dispatch(addItemToCart({dish, quantity}))}>ADD TO CART</button>
+        {/* {dish, quantity} - это объект с ключами dish и quantity, поэтому в {} */}
     </div>)
 };
 
