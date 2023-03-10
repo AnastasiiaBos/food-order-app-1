@@ -17,7 +17,7 @@ const Dishes = () => {
                 return  selectedCategory === item.category;
                 // верни те блюда у которых название категории из dishesData совпадает с категорией из reducer
             })
-            .map(dish => <Dish dish={dish} key={dish.id}/>)}
+            .map(dish => <Dish dish={dish} key={'dish-' + dish.id}/>)}
         </div>
     )
 };

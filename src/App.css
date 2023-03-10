@@ -1,10 +1,15 @@
 body {
-  background-color: #161616
+  background-color: #161616;
+  font-family: 'Poppins', sans-serif;
 }
 
 .App {
   display: flex;
   justify-content: space-around;
+}
+
+.p, h1, h2, button {
+  font-size: 20px;
 }
 
 .block {
@@ -29,18 +34,26 @@ h2 {
 
 .cartIcon {
   width: 70px;
-  margin: 0 auto;
+  margin: 10px auto;
   display: block;
+}
+
+.deleteIcon {
+  width: 20px;
+  cursor: pointer;
 }
 
 button {
   cursor: pointer;
+  background-color: #fdeb6b;
 }
 
 .categoryButton {
   margin: 5px;
   padding: 5px;
   cursor: pointer;
+  font-size: 16px;
+  letter-spacing: 1px;
 }
 
 .categoryButtonSelected {
@@ -57,4 +70,10 @@ button {
 
 .cartItem {
   margin: 10px 0;
+}
+
+.addBtn {
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 20px;
 }
